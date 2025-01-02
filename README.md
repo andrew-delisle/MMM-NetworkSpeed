@@ -1,6 +1,7 @@
 # MMM-NetworkSpeed
 
-A MagicMirror module that performs a network speed test and displays the results on your MagicMirror screen. It shows your ping time, download speed, and upload speed at regular intervals, with options for customization.
+- A MagicMirror module that performs a network speed test and displays the results on your MagicMirror screen. It shows your ping time, download speed, and upload speed at regular intervals, with options for customization.
+- This module was created based on my usage of https://github.com/slametps/MMM-NetworkConnection and created with ChatGPT and my testing.
 
 ## Features
 - Displays network speed information including:
