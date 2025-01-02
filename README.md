@@ -13,6 +13,8 @@ A MagicMirror module that performs a network speed test and displays the results
 
 ## Screenshots
 
+![image](https://github.com/user-attachments/assets/af6b6815-5cd1-4a86-9269-0e952577f736)
+
   
 ## Dependencies
 
