@@ -8,7 +8,7 @@ module.exports = NodeHelper.create({
 
     socketNotificationReceived: function (notification, payload) {
         if (notification === 'GET_SPEED') {
-            this.runSpeedTest(payload);
+            this.runSpeedTest();
         }
     },
 
@@ -30,14 +30,26 @@ module.exports = NodeHelper.create({
 
             try {
                 const result = JSON.parse(stdout);
-                console.log("Speed Test Results:", result);
 
-                // Send results to the front-end
-                self.sendSocketNotification('SPEED_TEST_RESULTS', {
-                    ping: result.ping,
-                    download: result.download,
-                    upload: result.upload
-                });
+                // Check if all the necessary values are present
+                if (result.ping !== undefined && result.download !== undefined && result.upload !== undefined) {
+                    console.log("Speed Test Results:", result);
+
+                    // Send results to the front-end
+                    self.sendSocketNotification('SPEED_TEST_RESULTS', {
+                        ping: result.ping,
+                        download: result.download,
+                        upload: result.upload
+                    });
+                } else {
+                    // If any of the values are missing, send 'N/A' for all fields
+                    console.error("Incomplete speedtest-cli result:", result);
+                    self.sendSocketNotification('SPEED_TEST_RESULTS', {
+                        ping: 'N/A',
+                        download: 'N/A',
+                        upload: 'N/A'
+                    });
+                }
             } catch (e) {
                 console.error("Error parsing speedtest-cli result:", e);
                 self.sendSocketNotification('SPEED_TEST_RESULTS', {
