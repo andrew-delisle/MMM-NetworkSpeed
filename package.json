@@ -1,0 +1,27 @@
+{
+  "name": "MMM-NetworkSpeed",
+  "version": "1.0.0",
+  "description": "A MagicMirror module to display network speed (ping, upload, download).",
+  "main": "MMM-NetworkSpeed.js",
+  "scripts": {
+    "start": "node MMM-NetworkSpeed.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "speedtest-net": "^1.0.0",
+    "exec-sh": "^0.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "keywords": [
+    "magicmirror",
+    "network",
+    "speedtest",
+    "ping",
+    "download",
+    "upload"
+  ],
+  "author": "Andrew DeLisle",
+  "license": "MIT"
+}
