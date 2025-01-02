@@ -35,18 +35,21 @@ This module depends on the following packages:
 
     4. Install required dependencies:  npm install
 
-## Configuration
+### Configure config.js
 
-In your config.js file, add the module to your list of modules:
+    In your config.js file, add the module to your list of modules:
     
-    {
-      module: 'MMM-NetworkSpeed',
-      position: 'bottom_bar', // Position on the screen
-      config: {
-        runInterval: 60 * 60 * 1000,  // Time between tests in milliseconds (default: 1 hour)
-        updateInterval: 60 * 60 * 1000, // How often to update the data on the screen (default: 1 hour)
-      }
-    }
+        {
+          module: 'MMM-NetworkSpeed',
+          position: 'bottom_bar', // Position on the screen
+          config: {
+            runInterval: 30 * 60 * 1000,  // Run speed test every 30 minutes (or set your preferred interval in ms)          }
+        }
+
+## Configuration Settings
+
+1. runInterval: Interval for running the speed test (Default is 30mins).
+
 
 ## License
 
