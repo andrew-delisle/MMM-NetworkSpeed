@@ -21,7 +21,7 @@ This module depends on the following packages:
     speedtest-cli (for testing network speed)
     node-fetch (for making HTTP requests)
 
-# Optional: Install speedtest-cli globally if not already installed
+### Optional: Install speedtest-cli globally if not already installed
 
           sudo npm install -g speedtest-cli
 
