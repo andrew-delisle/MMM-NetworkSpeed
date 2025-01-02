@@ -1,7 +1,9 @@
 Module.register("MMM-NetworkSpeed", {
     defaults: {
-        updateInterval: 60000,  // Default to 1 minute (60,000 ms)
         runInterval: 3600000,   // Default to 1 hour (3,600,000 ms)
+        animationSpeed: 1000,    // Smooth transition for data change
+        displayTextStatus: true,
+        language: "en",
     },
 
     start: function () {
@@ -41,7 +43,7 @@ Module.register("MMM-NetworkSpeed", {
         this.ping = pingTime;
 
         // Update the DOM to reflect the changes
-        this.updateDom();
+        this.updateDom(this.config.animationSpeed);
     },
 
     // Override the getDom method to render the data
