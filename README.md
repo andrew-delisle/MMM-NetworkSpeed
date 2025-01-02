@@ -14,6 +14,16 @@ A MagicMirror module that performs a network speed test and displays the results
 ## Screenshots
 
   
+## Dependencies
+
+This module depends on the following packages:
+
+    speedtest-cli (for testing network speed)
+    node-fetch (for making HTTP requests)
+
+# Optional: Install speedtest-cli globally if not already installed
+
+          sudo npm install -g speedtest-cli
 
 ## Installation
 
@@ -37,17 +47,6 @@ In your config.js file, add the module to your list of modules:
         updateInterval: 60 * 60 * 1000, // How often to update the data on the screen (default: 1 hour)
       }
     }
-
-## Dependencies
-
-This module depends on the following packages:
-
-    speedtest-cli (for testing network speed)
-    node-fetch (for making HTTP requests)
-
-Optional: Install speedtest-cli globally if not already installed:
-
-          sudo npm install -g speedtest-cli
 
 ## License
 
